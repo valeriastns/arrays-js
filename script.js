@@ -33,8 +33,10 @@ const players = [
      for (let i in players) {
         scorePoints[i] = players[i].scorePoints;
         maxScore = Math.max(...scorePoints)
+
+        const bestPlayers = players.filter(player => player.scorePoints === maxScore);
+        const bestPlayer = bestPlayers[0];
+
+        console.log(`${bestPlayer.name}:${bestPlayer.scorePoints}`);
+        return;
     };
-
-    console.log(`${players[0].name}:${maxScore}`);
-
-
