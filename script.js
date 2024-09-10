@@ -32,10 +32,9 @@ const players = [
 
      for (let i in players) {
         scorePoints[i] = players[i].scorePoints;
-       // console.log(scorePoints);
         maxScore = Math.max(...scorePoints)
     };
 
-    console.log(maxScore);
+    console.log(`${players[0].name}:${maxScore}`);
 
 
